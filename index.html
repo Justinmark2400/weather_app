@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="src/css/general.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <script type="module" src="src/js/controller.js"></script>
+    <title>Weather</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="main-nav default-padding">
+        <div class="logo nav-item">
+          <i class="ph-fill ph-cloud icon-logo"></i>
+          <p class="logo-name">WeatherImpact</p>
+        </div>
+        <!-- <form class="res search nav-item"> -->
+        <form class="search nav-item">
+          <button class="search-btn">
+            <i class="ph-bold ph-magnifying-glass icon-search"></i>
+          </button>
+          <input
+            id="search"
+            class="search-input"
+            type="text"
+            placeholder="Search city..."
+          />
+          <div class="search-select">
+            <!-- <div class="search-result">
+              <div class="results">
+                <i class="ph ph-map-pin"></i>
+                <div>
+                  <div class="city-name">jaipur</div>
+                  <div class="state-A-country-name">rajasthan, IN</div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </form>
+        <div class="cur-location nav-item">
+          <i class="ph ph-crosshair icon-location"></i>
+          <p class="cur-location-text">Current location</p>
+        </div>
+      </nav>
+    </header>
+    <div class="main-container default-padding">
+      <aside class="sidebar">
+        <div class="sidebar--cards">
+          <p class="text">Now</p>
+          <div class="sidebar--weather-temp">
+            <p class="sidebar--weather-temp--text">
+              <span class="current-weather-temp sidebar--weather-temp-text"
+                >24</span
+              >°C
+            </p>
+            <img
+              src="https://openweathermap.org/img/wn/10d@2x.png"
+              class="sidebar--weather-temp-icon"
+              alt="Weather icon"
+            />
+          </div>
+          <p class="sidebar--weather-status">Clouds</p>
+          <hr />
+          <div class="sidebar--weather-date">
+            <i class="ph ph-calendar-blank"></i>
+            <p class="gray-text weather--date">Monday 1, Mar</p>
+          </div>
+          <div class="sidebar--weather-location">
+            <i class="ph ph-map-pin"></i>
+            <p class="gray-text weather-location">London, GB</p>
+          </div>
+        </div>
+        <p class="sidebar--5day-forecast text">5 Days Forecast</p>
+
+        <div class="sidebar--cards">
+          <ul class="sidebar--forecast-items">
+            <li class="sidebar--forecast-item">
+              <div class="sidebar--forecast-temp">
+                <img
+                  src="https://openweathermap.org/img/wn/02n@2x.png"
+                  alt="weather image"
+                />
+                <p class="text">7°</p>
+              </div>
+              <p class="sidebar--forecast-date gray-text">2 Mar</p>
+              <p class="sidebar--forecast-day gray-text">Thursday</p>
+            </li>
+            <li class="sidebar--forecast-item">
+              <div class="sidebar--forecast-temp">
+                <img
+                  src="https://openweathermap.org/img/wn/02n@2x.png"
+                  alt="weather image"
+                />
+                <p class="text">5°</p>
+              </div>
+              <p class="sidebar--forecast-date gray-text">12 Mar</p>
+              <p class="sidebar--forecast-day gray-text">Friday</p>
+            </li>
+            <li class="sidebar--forecast-item">
+              <div class="sidebar--forecast-temp">
+                <img
+                  src="https://openweathermap.org/img/wn/02n@2x.png"
+                  alt="weather image"
+                />
+                <p class="text">7°</p>
+              </div>
+              <p class="sidebar--forecast-date gray-text">2 Mar</p>
+              <p class="sidebar--forecast-day gray-text">Thursday</p>
+            </li>
+            <li class="sidebar--forecast-item">
+              <div class="sidebar--forecast-temp">
+                <img
+                  src="https://openweathermap.org/img/wn/02n@2x.png"
+                  alt="weather image"
+                />
+                <p class="text">7°</p>
+              </div>
+              <p class="sidebar--forecast-date gray-text">2 Mar</p>
+              <p class="sidebar--forecast-day gray-text">Thursday</p>
+            </li>
+            <li class="sidebar--forecast-item">
+              <div class="sidebar--forecast-temp">
+                <img
+                  src="https://openweathermap.org/img/wn/02n@2x.png"
+                  alt="weather image"
+                />
+                <p class="text">7°</p>
+              </div>
+              <p class="sidebar--forecast-date gray-text">2 Mar</p>
+              <p class="sidebar--forecast-day gray-text">Thursday</p>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <main class="main">
+        <section class="section-highlights default-padding">
+          <p class="highlights-heading text">Todays Highlights</p>
+          <div class="highlight">
+            <div class="pollution highlight-cards highlight--padding">
+              <div class="highlight-status">
+                <p class="gray-text">Air Quility Index</p>
+                <p class="pollution-condition">Good</p>
+              </div>
+              <div
+                class="pollution-lists highlight-grid highlight-grid--5-cols"
+              >
+                <i class="ph ph-wind highlight-icon"></i>
+                <div class="pollution-list">
+                  <p class="gray-text--sm">PM25</p>
+                  <p class="text-bg">3.90</p>
+                </div>
+                <div class="pollution-list">
+                  <p class="gray-text--sm">SO2</p>
+                  <p class="text-bg">7.75</p>
+                </div>
+                <div class="pollution-list">
+                  <p class="gray-text--sm">NO2</p>
+                  <p class="text-bg">33.6</p>
+                </div>
+                <div class="pollution-list">
+                  <p class="gray-text--sm">O3</p>
+                  <p class="text-bg">38.6</p>
+                </div>
+              </div>
+            </div>
+            <div class="highlight-cards sun highlight--padding">
+              <p class="gray-text">Sunrise & Sunset</p>
+              <div class="sun-lists highlight-grid highlight-grid--2-cols">
+                <div class="sun-list">
+                  <i class="ph ph-sun highlight-icon"></i>
+                  <div>
+                    <p class="gray-text--sm">Sunrise</p>
+                    <p class="text-bg sunrise-time">6:64 AM</p>
+                  </div>
+                </div>
+                <div class="sun-list">
+                  <i class="ph ph-moon highlight-icon"></i>
+                  <div>
+                    <p class="gray-text--sm">Sunset</p>
+                    <p class="text-bg sunset-time">5:39 PM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="humidity-A-pressure highlight-grid highlight-grid--2-cols"
+            >
+              <div class="humidity highlight-cards highlight--padding">
+                <p class="gray-text">Humidity</p>
+                <div class="highlight-grid highlight-grid--2-cols">
+                  <i class="ph ph-drop-half-bottom highlight-icon"></i>
+                  <p class="text">
+                    <span class="text-bg humidity-value">82</span>%
+                  </p>
+                </div>
+              </div>
+              <div class="pressure highlight-cards highlight--padding">
+                <p class="gray-text">Pressure</p>
+                <div class="highlight-grid highlight-grid--2-cols">
+                  <i class="ph ph-waves highlight-icon"></i>
+                  <p class="text">
+                    <span class="text-bg pressure-value">1025</span>hPa
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="visibility-A-feels highlight-grid highlight-grid--2-cols"
+            >
+              <div class="visibility highlight-cards highlight--padding">
+                <p class="gray-text">Visibility</p>
+                <div class="highlight-grid highlight-grid--2-cols">
+                  <i class="ph ph-eye highlight-icon"></i>
+                  <p class="text">
+                    <span class="text-bg visibility-value">10</span>Km
+                  </p>
+                </div>
+              </div>
+              <div class="feels highlight-cards highlight--padding">
+                <p class="gray-text">Fesls Like</p>
+                <div class="highlight-grid highlight-grid--2-cols">
+                  <i class="ph ph-thermometer-hot highlight-icon"></i>
+                  <p class="text">
+                    <span class="feels-like-value text-bg">2</span>°C
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-forecast">
+          <p class="text">Today at</p>
+          <div class="hourly-forecast">
+            <div class="hourly-forecast--card">
+              <p class="hourly-forecast--time">9 PM</p>
+              <img
+                src="https://openweathermap.org/img/wn/02d@2x.png"
+                alt="weather image"
+                class="hourly-forecast--img"
+              />
+              <p class="hourly-forecast--temp">5<span>°</span></p>
+            </div>
+            <div class="hourly-forecast--card">
+              <p class="hourly-forecast--time">12 AM</p>
+              <img
+                src="https://openweathermap.org/img/wn/02d@2x.png"
+                alt="weather image"
+                class="hourly-forecast--img"
+              />
+              <p class="hourly-forecast--temp">4<span>°</span></p>
+            </div>
+            <div class="hourly-forecast--card">
+              <p class="hourly-forecast--time">3 AM</p>
+              <img
+                src="https://openweathermap.org/img/wn/02d@2x.png"
+                alt="weather image"
+                class="hourly-forecast--img"
+              />
+              <p class="hourly-forecast--temp">3<span>°</span></p>
+            </div>
+            <div class="hourly-forecast--card">
+              <p class="hourly-forecast--time">6 AM</p>
+              <img
+                src="https://openweathermap.org/img/wn/02d@2x.png"
+                alt="weather image"
+                class="hourly-forecast--img"
+              />
+              <p class="hourly-forecast--temp">1<span>°</span></p>
+            </div>
+            <div class="hourly-forecast--card">
+              <p class="hourly-forecast--time">9 AM</p>
+              <img
+                src="https://openweathermap.org/img/wn/01d@2x.png"
+                alt="weather image"
+                class="hourly-forecast--img"
+              />
+              <p class="hourly-forecast--temp">4<span>°</span></p>
+            </div>
+            <div class="hourly-forecast--card">
+              <p class="hourly-forecast--time">12 PM</p>
+              <img
+                src="https://openweathermap.org/img/wn/01d@2x.png"
+                alt="weather image"
+                class="hourly-forecast--img"
+              />
+              <p class="hourly-forecast--temp">8<span>°</span></p>
+            </div>
+            <div class="hourly-forecast--card">
+              <p class="hourly-forecast--time">3 PM</p>
+              <img
+                src="https://openweathermap.org/img/wn/01d@2x.png"
+                alt="weather image"
+                class="hourly-forecast--img"
+              />
+              <p class="hourly-forecast--temp">9<span>°</span></p>
+            </div>
+            <div class="hourly-forecast--card">
+              <p class="hourly-forecast--time">6 PM</p>
+              <img
+                src="https://openweathermap.org/img/wn/02d@2x.png"
+                alt="weather image"
+                class="hourly-forecast--img"
+              />
+              <p class="hourly-forecast--temp">7<span>°</span></p>
+            </div>
+
+            <!-- WIND -->
+
+            <div class="hourly-forecast--card">
+              <p class="hourly-forecast--time">6 PM</p>
+              <img
+                src="src/img/direction.png"
+                alt="weather image"
+                class="hourly-forecast--img wind-deg"
+              />
+              <p class="hourly-forecast--temp">9<span> km/h</span></p>
+            </div>
+            <div class="hourly-forecast--card">
+              <p class="hourly-forecast--time">6 PM</p>
+              <img
+                src="src/img/direction.png"
+                alt="weather image"
+                class="hourly-forecast--img"
+              />
+              <p class="hourly-forecast--temp">8<span> km/h</span></p>
+            </div>
+            <div class="hourly-forecast--card">
+              <p class="hourly-forecast--time">6 PM</p>
+              <img
+                src="src/img/direction.png"
+                alt="weather image"
+                class="hourly-forecast--img"
+              />
+              <p class="hourly-forecast--temp">8<span> km/h</span></p>
+            </div>
+            <div class="hourly-forecast--card">
+              <p class="hourly-forecast--time">6 PM</p>
+              <img
+                src="src/img/direction.png"
+                alt="weather image"
+                class="hourly-forecast--img"
+              />
+              <p class="hourly-forecast--temp">12<span> km/h</span></p>
+            </div>
+            <div class="hourly-forecast--card">
+              <p class="hourly-forecast--time">6 PM</p>
+              <img
+                src="src/img/direction.png"
+                alt="weather image"
+                class="hourly-forecast--img"
+              />
+              <p class="hourly-forecast--temp">13<span> km/h</span></p>
+            </div>
+            <div class="hourly-forecast--card">
+              <p class="hourly-forecast--time">6 PM</p>
+              <img
+                src="src/img/direction.png"
+                alt="weather image"
+                class="hourly-forecast--img"
+              />
+              <p class="hourly-forecast--temp">10<span> km/h</span></p>
+            </div>
+            <div class="hourly-forecast--card">
+              <p class="hourly-forecast--time">6 PM</p>
+              <img
+                src="src/img/direction.png"
+                alt="weather image"
+                class="hourly-forecast--img"
+              />
+              <p class="hourly-forecast--temp">14<span> km/h</span></p>
+            </div>
+            <div class="hourly-forecast--card">
+              <p class="hourly-forecast--time">6 PM</p>
+              <img
+                src="src/img/direction.png"
+                alt="weather image"
+                class="hourly-forecast--img"
+              />
+              <p class="hourly-forecast--temp">15<span> km/h</span></p>
+            </div>
+          </div>
+        </section>
+        <footer class="main-footer">
+          <p>&copy; Copyright 2023 punikumat. All Right Reserved.</p>
+        </footer>
+      </main>
+      <div class="loading hidden" data-loading></div>
+      <div class="error hidden">
+        <div class="error-box">
+          <p class="text"><span class="text-bg">404</span> Page not found</p>
+          <a class="error-btn" href="#">Go Home</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
